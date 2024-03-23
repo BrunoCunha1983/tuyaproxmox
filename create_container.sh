@@ -55,7 +55,7 @@ pushd $TEMP_DIR >/dev/null
 
 # Download setup and login script
 GITHUB=https://github.com/
-GITHUB_REPO=Jayroo1976/tuyaproxmox
+GITHUB_REPO=BrunoCunha1983/tuyaproxmox
 GITHUB_REPO_BRANCH=master
 URL=${GITHUB}${GITHUB_REPO}/raw/${GITHUB_REPO_BRANCH}
 wget -qL ${URL}/{commit_switcher,configure_tuya-convert,install_tuya-convert,login}.sh
@@ -192,7 +192,7 @@ ARCH=$(dpkg --print-architecture)
 HOSTNAME=tuya-convert
 TEMPLATE_STRING="local:vztmpl/${TEMPLATE}"
 pct create $CTID $TEMPLATE_STRING -arch $ARCH -cores 1 -hostname $HOSTNAME \
-  -net0 name=eth0,bridge=vmbr0,ip=dhcp -ostype $OSTYPE \
+  -net0 name=eth0,bridge=vmbr0,ip=192.168.1.205 -ostype $OSTYPE \
   -rootfs $ROOTFS -storage $STORAGE >/dev/null
 
 # Pass network interface to LXC

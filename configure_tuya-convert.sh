@@ -6,7 +6,7 @@ set -o errtrace #Trap ERR from shell functions, command substitutions, and comma
 set -o nounset  #Treat unset variables as an error
 set -o pipefail #Pipe will exit with last non-zero status if applicable
 
-cd /root/tuya-convert
+cd /root/tuyaproxmox
 find ./ -name \*.sh -exec sed -i -e "s/sudo \(-\S\+ \)*//" {} \;
 
 WLAN=$(iw dev | sed -n 's/[[:space:]]Interface \(.*\)/\1/p')

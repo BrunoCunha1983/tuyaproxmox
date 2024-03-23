@@ -153,8 +153,8 @@ CTID=$(pvesh get /cluster/nextid)
 info "Container ID is $CTID."
 
 # Download latest Debian LXC template
-msg "Updating LXC template list..."
-pveam update >/dev/null
+#msg "Updating LXC template list..."
+#pveam update >/dev/null
 msg "Downloading LXC template..."
 OSTYPE=debian
 OSVERSION=${OSTYPE}-10
